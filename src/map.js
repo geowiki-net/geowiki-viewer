@@ -15,7 +15,13 @@ function appInit (app, callback) {
     ...(app.config.app ?? {})
   }
 
-  app.map = L.map('map', { maxZoom: app.config.maxZoom })
+  const mapOptions = {
+    maxZoom: app.config.maxZoom
+  }
+
+  app.emit('map-options', mapOptions)
+
+  app.map = L.map('map', mapOptions)
 
   app.map.attributionControl.setPrefix('<a target="_blank" href="' + encodeURI(app.config.app.url) + '">' + app.config.app.name + '</a>')
 
