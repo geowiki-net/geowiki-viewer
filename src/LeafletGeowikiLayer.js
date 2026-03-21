@@ -52,7 +52,7 @@ class LeafletGeowikiLayer extends Events {
 
     Promise.all([
       this.app.dataSources.get(parameters.data),
-      this.app.styleLoader.get(parameters.styleFile)
+      this.app.styleRegistry.get(parameters.styleFile)
     ]).then(([data, style]) => {
       this.parameters.data = data.id
 

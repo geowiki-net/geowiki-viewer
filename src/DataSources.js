@@ -1,5 +1,5 @@
 import GeowikiAPI from '@geowiki-net/geowiki-api'
-import EntityList from './EntityList'
+import EntityList from '@geowiki-net/geowiki-lib-app/src/EntityList.js'
 
 const defaultList = {
   osm: {

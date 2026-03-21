@@ -79,7 +79,7 @@ class StyleEditor {
     controls.appendChild(this.downloadLink)
     this.textarea.onchange = () => this.updateDownloadLink()
 
-    this.app.styleLoader.get(this.leafletGeowikiLayer.parameters.styleFile)
+    this.app.styleRegistry.get(this.leafletGeowikiLayer.parameters.styleFile)
       .then(def => {
         this.textarea.value = def.data
         this.updateDownloadLink()

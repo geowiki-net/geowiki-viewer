@@ -6,7 +6,7 @@ const baseModules = [
   require('./dataSources'),
   require('./layers'),
   require('./config'),
-  require('./styleLoader')
+  require('@geowiki-net/geowiki-style-registry').default
 ]
 
 App.modules = [...baseModules, ...App.modules, ...require('../modules')]
