@@ -38,9 +38,6 @@ module.exports = [
   // Layer Selector
   require('geowiki-module-layer-selector'),
 
-  // Load Styles from data/-Directory
-  require('./src/styleLoaderFromData'),
-
   // Load Styles from browser localStorage
   require('./src/customStyles'),
 
