@@ -1,3 +1,5 @@
+import GeowikiAPI from '@geowiki-net/geowiki-api'
+
 module.exports = {
   id: 'listDataDirectory',
   appInit (app) {
@@ -8,7 +10,8 @@ module.exports = {
 
           const result = list
             .map(id => {
-              if (!id.match(/(\.osm|\.osm\.bz2|\.osm\.json)$/)) {
+              const willLoad = GeowikiAPI.fileFormats.filter(ff => ff.willLoad(id))
+              if (!willLoad.length) {
                 return
               }
 
