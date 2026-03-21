@@ -14,6 +14,9 @@ module.exports = {
 
               return {
                 id,
+                options: {
+                  isFile: true
+                },
                 url: id
               }
             })
