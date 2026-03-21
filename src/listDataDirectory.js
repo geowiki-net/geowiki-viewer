@@ -17,7 +17,7 @@ module.exports = {
                 options: {
                   isFile: true
                 },
-                url: id
+                url: app.config.dataDirectory + '/' + id
               }
             })
             .filter(v => v)
@@ -40,7 +40,7 @@ module.exports = {
 
               return {
                 id,
-                url: id
+                url: app.config.dataDirectory + '/' + id
               }
             })
             .filter(v => v)
