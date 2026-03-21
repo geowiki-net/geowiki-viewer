@@ -20,6 +20,7 @@ class App extends Events {
   }
 
   initModules (callback) {
+    this.modules = App.modules
     initModules(this, 'appInit', App.modules, (err) => {
       if (err) {
         global.alert(err.message)
