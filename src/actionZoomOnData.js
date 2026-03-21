@@ -7,12 +7,12 @@ module.exports = {
       button.innerHTML = '<i class="fa-solid fa-arrows-to-circle" title="Zoom on data"></i>'
       div.appendChild(button)
 
-      if (leafletGeowikiLayer.overpassFrontend) {
-        show(button, leafletGeowikiLayer.overpassFrontend)
+      if (leafletGeowikiLayer.geowikiAPI) {
+        show(button, leafletGeowikiLayer.geowikiAPI)
       }
 
       leafletGeowikiLayer.on('layer-show', () => {
-        show(button, leafletGeowikiLayer.overpassFrontend)
+        show(button, leafletGeowikiLayer.geowikiAPI)
       })
 
       leafletGeowikiLayer.on('layer-hide', () => {
@@ -20,7 +20,7 @@ module.exports = {
       })
 
       button.onclick = () => {
-        leafletGeowikiLayer.overpassFrontend.getMeta((err, meta) => {
+        leafletGeowikiLayer.geowikiAPI.getMeta((err, meta) => {
           if (meta.bounds) {
             app.map.flyToBounds(meta.bounds.toLeaflet())
           }
@@ -30,8 +30,8 @@ module.exports = {
   }
 }
 
-function show (button, overpassFrontend) {
-  overpassFrontend.getMeta((err, meta) => {
+function show (button, geowikiAPI) {
+  geowikiAPI.getMeta((err, meta) => {
     if (meta.bounds) {
       button.classList.remove('disabled')
     }

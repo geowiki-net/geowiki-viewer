@@ -56,7 +56,7 @@ class LeafletGeowikiLayer extends Events {
     ]).then(([data, style]) => {
       this.parameters.data = data.id
 
-      this.overpassFrontend = data.data
+      this.geowikiAPI = data.data
 
       this.app.emit('style-load', style.data)
 
@@ -70,7 +70,7 @@ class LeafletGeowikiLayer extends Events {
       }
 
       this.layer = new LeafletGeowiki({
-        overpassFrontend: data.data,
+        geowikiAPI: data.data,
         style
       })
 

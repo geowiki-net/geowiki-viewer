@@ -1,4 +1,4 @@
-import OverpassFrontend from 'overpass-frontend'
+import GeowikiAPI from '@geowiki-net/geowiki-api'
 
 import isRelativePath from './isRelativePath'
 module.exports = {
@@ -12,7 +12,7 @@ function appInit (_app, callback) {
   app = _app
 
   app.on('state-apply', state => {
-    if (!app.overpassFrontend || ('data' in state && state.data !== app.options.data)) {
+    if (!app.geowikiAPI || ('data' in state && state.data !== app.options.data)) {
       loadData(state.data)
       app.emit('data-defined')
     }
@@ -21,8 +21,8 @@ function appInit (_app, callback) {
   app.on('initial-map-view', promises => {
     promises.push(new Promise((resolve, reject) => {
       app.once('data-defined', () => {
-        if (app.overpassFrontend.localOnly) {
-          app.overpassFrontend.on('load', meta => {
+        if (app.geowikiAPI.localOnly) {
+          app.geowikiAPI.on('load', meta => {
             if (meta.bounds) {
               resolve({
                 type: 'bounds',
@@ -49,9 +49,10 @@ function loadData (path) {
     path = app.config.dataDirectory + '/' + path
   }
 
-  app.overpassFrontend = new OverpassFrontend(path)
+  app.geowikiAPI = new GeowikiAPI(path)
+  app.overpassFrontend = app.geowikiAPI // compatibility
 
-  app.overpassFrontend.on('error', err => {
+  app.geowikiAPI.on('error', err => {
     global.alert(err.statusText)
   })
 }

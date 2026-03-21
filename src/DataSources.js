@@ -1,4 +1,4 @@
-import OverpassFrontend from 'overpass-frontend'
+import GeowikiAPI from '@geowiki-net/geowiki-api'
 import EntityList from './EntityList'
 
 const defaultList = {
@@ -14,8 +14,8 @@ const defaultList = {
  * @property {string} [title] title of the file.
  * @property {string} [url] URL of the file (if any).
  * @property {Promise.<string>} [loader] promise, which will resolve to an URL.
- * @property {object} [options] Additional options which will be passed to the OverpassFrontend constructor.
- * @property {OverpassFrontend} [data] When the data sources has been loaded, the reference is stored in this property.
+ * @property {object} [options] Additional options which will be passed to the GeowikiAPI constructor.
+ * @property {GeowikiAPI} [data] When the data sources has been loaded, the reference is stored in this property.
  */
 
 /**
@@ -48,7 +48,7 @@ class DataSources extends EntityList {
   }
 
   /**
-   * resolves an item to its OverpassFrontend instance.
+   * resolves an item to its GeowikiAPI instance.
    * @param {DataSources#file} item A file descriptor
    * @param {string} url
    * @returns {Promise}
@@ -57,7 +57,7 @@ class DataSources extends EntityList {
   resolveItem (item, url) {
     return new Promise((resolve) => {
       if (!item.data) {
-        item.data = new OverpassFrontend(url, item.options)
+        item.data = new GeowikiAPI(url, item.options)
       }
 
       resolve()
