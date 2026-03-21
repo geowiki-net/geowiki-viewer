@@ -1,6 +1,6 @@
 import Events from 'events'
 import yaml from 'js-yaml'
-import LeafletGeowiki from 'leaflet-geowiki/minimal'
+import LeafletGeowiki from '@geowiki-net/leaflet-geowiki/minimal'
 
 /**
  * The parameters of a layer

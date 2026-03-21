@@ -3,34 +3,34 @@
 
 module.exports = [
   // Render map info into a div
-  require('leaflet-geowiki/src/info'),
+  require('@geowiki-net/leaflet-geowiki/src/info'),
 
   // List map features in a div
-  require('leaflet-geowiki/src/list'),
+  require('@geowiki-net/leaflet-geowiki/src/list'),
 
   // Render markers on the map
-  require('leaflet-geowiki/src/markers'),
+  require('@geowiki-net/leaflet-geowiki/src/markers'),
 
   // Create additional panes to layer map features
-  require('leaflet-geowiki/src/panes'),
+  require('@geowiki-net/leaflet-geowiki/src/panes'),
 
   // Query data from Wikidata
-  require('leaflet-geowiki/src/wikidata'),
+  require('@geowiki-net/leaflet-geowiki/src/wikidata'),
 
   // Language support
-  require('leaflet-geowiki/src/language'),
+  require('@geowiki-net/leaflet-geowiki/src/language'),
 
   // Miscellaneous twig functions
-  require('leaflet-geowiki/src/twigFunctions'),
+  require('@geowiki-net/leaflet-geowiki/src/twigFunctions'),
 
   // Translate tag values (with openstreetmap-tag-translations)
-  require('leaflet-geowiki/src/tagTranslations'),
+  require('@geowiki-net/leaflet-geowiki/src/tagTranslations'),
 
   // Enable support for parsing opening_hours tags
   require('geowiki-module-opening-hours'),
 
   // Evaluate an object against the current stylesheet to get the style (often used in map info)
-  require('leaflet-geowiki/src/evaluate'),
+  require('@geowiki-net/leaflet-geowiki/src/evaluate'),
 
   // Add a 'Fullscreen' button to Geowiki Viewer
   require('geowiki-module-fullscreen'),

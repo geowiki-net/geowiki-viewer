@@ -2,7 +2,7 @@ import Events from 'events'
 import state from './state'
 import yaml from 'js-yaml'
 import twigGet from './twigGet'
-import initModules from 'leaflet-geowiki/src/initModules'
+import initModules from '@geowiki-net/geowiki-lib-modules/src/initModules'
 
 /**
  * main Geowiki application

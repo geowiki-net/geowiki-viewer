@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "@geowiki-net/geowiki-api": "^4.0.0-beta.3",
+    "@geowiki-net/geowiki-lib-modules": "github:geowiki-net/geowiki-lib-modules",
+    "@geowiki-net/leaflet-geowiki": "github:geowiki-net/leaflet-geowiki",
     "esmify": "^2.1.1",
     "geowiki-module-download-features": "github:geowiki-net/geowiki-module-download-features",
     "geowiki-module-fullscreen": "github:geowiki-net/geowiki-module-fullscreen",
@@ -21,7 +23,6 @@
     "geowiki-module-upload-file": "github:geowiki-net/geowiki-module-upload-file",
     "js-yaml": "^4.1.0",
     "leaflet": "^1.7.1",
-    "leaflet-geowiki": "github:geowiki-net/leaflet-geowiki",
     "leaflet-polylinedecorator": "git+https://github.com/plepe/Leaflet.PolylineDecorator.git",
     "leaflet-polylineoffset": "^1.1.1",
     "leaflet-textpath": "github:makinacorpus/Leaflet.TextPath#leaflet0.8-dev",
