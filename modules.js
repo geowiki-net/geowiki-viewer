@@ -66,5 +66,5 @@ module.exports = [
   require('geowiki-module-color'),
 
   // Suport for UMap files (parsing & style)
-  require('@geowiki-net/geowiki-umap'),
+  require('@geowiki-net/geowiki-module-umap'),
 ]
