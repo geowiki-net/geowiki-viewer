@@ -21,7 +21,7 @@ module.exports = [
   require('@geowiki-net/leaflet-geowiki/src/language'),
 
   // Miscellaneous twig functions
-  require('@geowiki-net/leaflet-geowiki/src/twigFunctions'),
+  require('@geowiki-net/geowiki-twig-functions'),
 
   // Translate tag values (with openstreetmap-tag-translations)
   require('@geowiki-net/leaflet-geowiki/src/tagTranslations'),
