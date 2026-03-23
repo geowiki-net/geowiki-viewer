@@ -58,6 +58,18 @@ class DataSources extends EntityList {
   resolveItem (item, url) {
     return new Promise((resolve) => {
       if (!item.data) {
+        if (!item.options) {
+          item.options = {}
+        }
+
+        // auto-detect file format
+        if (item.filename && !item.options.fileFormat) {
+          const formats = GeowikiAPI.fileFormats.filter(ff => ff.willLoad(item.filename))
+          if (formats.length) {
+            item.options.fileFormat = formats[0].id
+          }
+        }
+
         item.data = new GeowikiAPI(url, item.options)
       }
 

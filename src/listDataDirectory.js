@@ -21,6 +21,7 @@ module.exports = {
                   isFile: true
                 },
                 filename: id,
+                fileFormat: willLoad[0].id,
                 url: app.config.dataDirectory + '/' + id
               }
             })
