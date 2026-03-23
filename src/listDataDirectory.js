@@ -20,6 +20,7 @@ module.exports = {
                 options: {
                   isFile: true
                 },
+                filename: id,
                 url: app.config.dataDirectory + '/' + id
               }
             })
@@ -43,6 +44,7 @@ module.exports = {
 
               return {
                 id,
+                filename: id,
                 url: app.config.dataDirectory + '/' + id
               }
             })
