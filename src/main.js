@@ -2,7 +2,7 @@ import App from './App'
 
 const baseModules = [
   require('./lang'),
-  require('./map'),
+  require('@geowiki-net/geowiki-lib-leaflet'),
   require('./dataSources'),
   require('./layers'),
   require('./config'),

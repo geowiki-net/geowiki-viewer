@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@geowiki-net/geowiki-api": "^4.0.0-beta.3",
+    "@geowiki-net/geowiki-lib-leaflet": "github:geowiki-net/geowiki-lib-leaflet",
     "@geowiki-net/geowiki-lib-modules": "github:geowiki-net/geowiki-lib-modules",
     "@geowiki-net/geowiki-module-umap": "github:geowiki-net/geowiki-module-umap",
     "@geowiki-net/geowiki-style-registry": "github:geowiki-net/geowiki-style-registry",
