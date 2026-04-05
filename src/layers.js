@@ -2,7 +2,7 @@ import yaml from 'js-yaml'
 import eachOf from 'async/eachOf'
 import LeafletGeowiki from '@geowiki-net/leaflet-geowiki/minimal'
 import LeafletGeowikiLayer from './LeafletGeowikiLayer'
-import App from './App'
+import App from '@geowiki-net/geowiki-lib-app'
 
 module.exports = {
   id: 'layers',
